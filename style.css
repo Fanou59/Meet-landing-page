@@ -1,0 +1,263 @@
+/* ********************* Reset CSS ***************************** */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ********************* Global ******************************** */
+:root {
+    --green: #4D96A9;
+    --purple: #855FB1;
+    --black: #28283D;
+    --grey: #87879D;
+    --blue: #8FE3F9;
+    --softpurple: #D9B8FF;
+    --white: #FAFAFA;
+    font-family: "Red Hat Display";
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+header,
+main,
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ********************** Style Header****************************** */
+.img-header {
+    max-width: 100%;
+    content: url(/starter-code/assets/tablet/image-hero.png);
+}
+
+h1 {
+    font-size: 3.5em;
+    line-height: 64px;
+
+}
+
+h1,
+.header-p,
+p,
+h2 {
+    text-align: center;
+}
+
+.header-p,
+p {
+    font-weight: 500;
+    line-height: 26px;
+    color: var(--grey);
+
+}
+
+.download,
+.what,
+.download-footer {
+    color: var(--white);
+    font-weight: 900;
+    line-height: 26px;
+    font-size: 16px;
+    border: none;
+    border-radius: 29px;
+}
+
+.download,
+.download-footer {
+    padding: 16px 40px;
+}
+
+.download {
+
+    background-color: var(--green);
+
+}
+
+.download span {
+    color: var(--blue);
+}
+
+.what {
+    padding: 16px 29px;
+    background-color: var(--purple);
+}
+
+/* **************** Style main ******************** */
+.main-photo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(151px, 1fr));
+    grid-gap: 25px;
+
+}
+
+.main-photo img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 2.2em;
+    line-height: 44px;
+
+}
+
+h3 {
+    font-size: 0.88em;
+    line-height: 26px;
+    letter-spacing: 4px;
+    color: var(--green);
+    text-transform: uppercase;
+}
+
+
+/* **************** Style footer ******************* */
+footer {
+    background-image: url(/starter-code/assets/mobile/image-footer.jpg);
+
+}
+
+footer>p,
+footer>h2 {
+    color: var(--white)
+}
+
+.download-footer {
+    background-color: var(--purple);
+}
+
+.download-footer span {
+    color: var(--softpurple);
+}
