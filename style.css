@@ -150,7 +150,7 @@ main {
     margin: 0 auto;
 }
 
-.container {
+body {
     display: flex;
     flex-direction: column;
 
@@ -165,46 +165,49 @@ footer {
 }
 
 /* ********************** Style Header****************************** */
-svg {
+.header__logo {
     margin-top: 46px;
 }
 
-.img-header {
+.header__img {
     max-width: 100%;
     content: url(/starter-code/assets/tablet/image-hero.png);
     margin-top: 54px;
 }
 
-h1 {
+.header__title {
     font-size: 2.5em;
     line-height: 44px;
     margin-top: 48px;
 
 }
 
-.header-p {
-    margin-top: 24px;
+.header__p {
+    margin: 24px;
+    margin-bottom: 0;
 }
 
-h1,
-.header-p,
-p,
-h2 {
+.header__title,
+.header__p,
+.main__p,
+.main__title2,
+.footer__p,
+.footer__title2 {
     text-align: center;
 }
 
-.header-p,
-p {
+.header__p,
+.main__p,
+.footer__p {
     font-weight: 500;
     line-height: 26px;
     color: var(--grey);
-
 }
 
 
-.download,
-.what,
-.download-footer {
+.header__btn--download,
+.header__btn--what,
+.footer__btn--download {
     color: var(--white);
     font-weight: 900;
     line-height: 26px;
@@ -213,51 +216,66 @@ p {
     border-radius: 29px;
 }
 
-.download,
-.download-footer {
+.header__btn--download,
+.footer__btn--download {
     padding: 16px 40px;
     margin-top: 32px;
 }
 
-.download {
+.header__btn--download {
 
     background-color: var(--green);
-
+}
+.header__btn--download:hover{
+    background-color: #71C0D4;
 }
 
-.download span {
+.header__btn--download span {
     color: var(--blue);
 }
 
-.what {
+.header__btn--what {
     padding: 16px 29px;
     background-color: var(--purple);
     margin-top: 16px;
+    margin-bottom: 64px;
+}
+.header__btn--what:hover{
+    background-color: #B18BDD;
+
+}
+.footer__btn--download:hover{
+    background-color: #B18BDD;
 }
 
 /* **************** Style main ******************** */
-.main-photo {
+.main__photo {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(137px, 1fr));
+    /* grid-template-rows:min-content; */
     grid-gap: 25px;
     margin-top: 64px;
 
 }
 
-.main-photo img {
+.main__photo img {
     width: 100%;
     border-radius: 10px;
 }
 
-h2 {
+.main__title2,
+.footer__title2 {
     font-size: 2em;
     line-height: 36px;
-    margin-top: 92px;
 
 
 }
 
-h3 {
+.main__title2 {
+    margin-top: 24px;
+}
+
+.main__title3 {
     font-size: 0.88em;
     line-height: 26px;
     letter-spacing: 4px;
@@ -266,18 +284,19 @@ h3 {
     margin-top: 64px;
 }
 
-main>p {
+.main__p {
     margin-top: 32px;
 }
 
-.trait {
+.main__trait1,
+.main__trait2 {
     border-right: 1px solid var(--grey);
     opacity: .25;
     height: 84px;
-    margin-top: 64px;
 }
 
-.logo {
+.main__number1,
+.main__number2 {
     border: 1px solid rgba(135, 135, 157, 0.25);
     border-radius: 50% 50%;
     padding: 19px;
@@ -285,55 +304,59 @@ main>p {
     background-color: white;
 }
 
+.main__trait2,
+.main__number2 {
+    position: relative;
+    top: 9vh;
+    Z-index: 1;
+
+}
 
 /* **************** Style footer ******************* */
 footer {
 
     margin-top: 64px;
-}
-
-.footer-bg {
-    /* display: flex; */
-    /* flex-direction: column; */
-    background-image: url(/starter-code/assets/mobile/image-footer.jpg);
+    background-image: linear-gradient(rgba(77, 150, 168, 0.8), rgba(77, 150, 168, 0.8)), url(/starter-code/assets/mobile/image-footer.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
-    /* opacity: .3; */
-    /* z-index: 1; */
-    /* max-width:100% */
-}
-.overlay{
-    display:flex;
-    flex-direction: column;
-    /* width: 100%; */
-    /* height: 100%; */
-    background-color:var(--green);
-opacity: 0.8;
 }
 
-.footer-bg>p,
-.footer-bg>h2 {
+.footer__p,
+.footer__title2 {
     color: var(--white);
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
-.footer-bg>p {
+.footer__title2 {
+    margin-top: 92px;
+}
+
+.footer__p {
     margin-top: 24px;
 }
 
-.download-footer {
+.footer__btn--download {
+
     background-color: var(--purple);
     margin-bottom: 72px;
+    width: 193px;
 }
 
-.download-footer span {
+.footer__btn--download span {
     color: var(--softpurple);
 }
 
-footer>.trait,
-footer>.logo {
-    position: relative;
-    top: 3vh;
-    Z-index:1;
-
+@media only screen and (min-width:580px){
+    header{
+        /* flex-direction: row; */
+    }
+    main{
+        width: 90%;
+        /* margin:0 24px 0 24px; */
+    }
+.main__photo{
+    grid-template-columns: repeat(4,1fr);
+}
 }
