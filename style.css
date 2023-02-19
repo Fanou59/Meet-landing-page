@@ -170,7 +170,7 @@ footer {
 
 .header__img {
     max-width: 110%;
-    content: url(/starter-code/assets/tablet/image-hero.png);
+    content: url(./starter-code/assets/tablet/image-hero.png);
 
 
     margin-top: 3.37rem;
