@@ -139,7 +139,6 @@ table {
     --softpurple: #D9B8FF;
     --white: #FAFAFA;
     font-family: "Red Hat Display";
-    font-size: 16px;
     font-weight: 900;
 }
 
@@ -166,24 +165,26 @@ footer {
 
 /* ********************** Style Header****************************** */
 .header__logo {
-    margin-top: 46px;
+    margin-top: 2.8rem;
 }
 
 .header__img {
-    max-width: 100%;
+    max-width: 110%;
     content: url(/starter-code/assets/tablet/image-hero.png);
-    margin-top: 54px;
+
+
+    margin-top: 3.37rem;
 }
 
 .header__title {
-    font-size: 2.5em;
-    line-height: 44px;
-    margin-top: 48px;
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    margin-top: 3rem;
 
 }
 
 .header__p {
-    margin: 24px;
+    margin: 1.5rem;
     margin-bottom: 0;
 }
 
@@ -200,8 +201,25 @@ footer {
 .main__p,
 .footer__p {
     font-weight: 500;
-    line-height: 26px;
     color: var(--grey);
+
+}
+
+.header__p,
+.main__p,
+.footer__p,
+.header__btn--download,
+.header__btn--what,
+.footer__btn--download,
+.main__title3 {
+    line-height: 1.62rem;
+}
+
+.header__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -210,23 +228,24 @@ footer {
 .footer__btn--download {
     color: var(--white);
     font-weight: 900;
-    line-height: 26px;
-    font-size: 16px;
+    font-size: 1rem;
     border: none;
     border-radius: 29px;
 }
 
 .header__btn--download,
 .footer__btn--download {
-    padding: 16px 40px;
-    margin-top: 32px;
+    padding: 1rem 2.5rem;
+    margin-top: 2rem;
+    width: 193px;
 }
 
 .header__btn--download {
 
     background-color: var(--green);
 }
-.header__btn--download:hover{
+
+.header__btn--download:hover {
     background-color: #71C0D4;
 }
 
@@ -235,16 +254,19 @@ footer {
 }
 
 .header__btn--what {
-    padding: 16px 29px;
+    padding: 1rem 1.8rem;
     background-color: var(--purple);
-    margin-top: 16px;
-    margin-bottom: 64px;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    width: 139px;
 }
-.header__btn--what:hover{
+
+.header__btn--what:hover {
     background-color: #B18BDD;
 
 }
-.footer__btn--download:hover{
+
+.footer__btn--download:hover {
     background-color: #B18BDD;
 }
 
@@ -252,9 +274,8 @@ footer {
 .main__photo {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(137px, 1fr));
-    /* grid-template-rows:min-content; */
     grid-gap: 25px;
-    margin-top: 64px;
+    margin-top: 4rem;
 
 }
 
@@ -265,27 +286,26 @@ footer {
 
 .main__title2,
 .footer__title2 {
-    font-size: 2em;
-    line-height: 36px;
+    font-size: 2rem;
+    line-height: 2.25rem;
 
 
 }
 
 .main__title2 {
-    margin-top: 24px;
+    margin-top: 1.5rem;
 }
 
 .main__title3 {
-    font-size: 0.88em;
-    line-height: 26px;
-    letter-spacing: 4px;
+    font-size: 0.88rem;
+    letter-spacing: .25rem;
     color: var(--green);
     text-transform: uppercase;
-    margin-top: 64px;
+    margin-top: 4rem;
 }
 
 .main__p {
-    margin-top: 32px;
+    margin-top: 2rem;
 }
 
 .main__trait1,
@@ -299,7 +319,7 @@ footer {
 .main__number2 {
     border: 1px solid rgba(135, 135, 157, 0.25);
     border-radius: 50% 50%;
-    padding: 19px;
+    padding: 1.18rem;
     color: var(--grey);
     background-color: white;
 }
@@ -307,7 +327,7 @@ footer {
 .main__trait2,
 .main__number2 {
     position: relative;
-    top: 9vh;
+    top: 8.5vh;
     Z-index: 1;
 
 }
@@ -315,18 +335,24 @@ footer {
 /* **************** Style footer ******************* */
 footer {
 
-    margin-top: 64px;
+    margin-top: 4rem;
     background-image: linear-gradient(rgba(77, 150, 168, 0.8), rgba(77, 150, 168, 0.8)), url(/starter-code/assets/mobile/image-footer.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
 }
 
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .footer__p,
 .footer__title2 {
     color: var(--white);
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
 }
 
 .footer__title2 {
@@ -334,29 +360,130 @@ footer {
 }
 
 .footer__p {
-    margin-top: 24px;
+    margin-top: 1.5rem;
 }
 
 .footer__btn--download {
 
     background-color: var(--purple);
-    margin-bottom: 72px;
-    width: 193px;
+    margin-bottom: 4.5rem;
 }
 
 .footer__btn--download span {
     color: var(--softpurple);
 }
 
-@media only screen and (min-width:580px){
-    header{
-        /* flex-direction: row; */
-    }
-    main{
+@media only screen and (min-width:580px) {
+
+
+    main {
         width: 90%;
-        /* margin:0 24px 0 24px; */
     }
-.main__photo{
-    grid-template-columns: repeat(4,1fr);
+
+    .main__photo {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .header__btn {
+        flex-direction: row;
+    }
+
+    .header__btn--download {
+        margin-right: 1rem;
+    }
+
+    .header__btn--download,
+    .header__btn--what {
+        margin-bottom: 5rem;
+        margin-top: 2rem;
+    }
+
 }
+
+@media only screen and (min-width:1330px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: "logo logo logo"
+            "imgleft title imgright";
+        justify-items: center;
+        column-gap: 88px;
+    }
+
+    .header__logo {
+        grid-area: logo;
+        margin-bottom: 3.8rem;
+
+    }
+
+    .header__img {
+        content: none;
+    }
+
+    .header__imgheroleft {
+        grid-area: imgleft;
+        content: url(/starter-code/assets/desktop/image-hero-left.png)
+    }
+
+    .header__imgheroright {
+        grid-area: imgright;
+        content: url(/starter-code/assets/desktop/image-hero-right.png);
+
+    }
+
+    .header__content {
+        grid-area: title;
+        align-self: self-end;
+    }
+
+    .header__title {
+        margin-top: 0;
+
+    }
+
+    .header__btn--download,
+    .header__btn--what {
+        margin-bottom: 0;
+    }
+
+    footer {
+        height: 300px;
+        justify-content: center;
+
+
+    }
+
+    .footer__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        padding: 0 10rem;
+
+
+
+
+    }
+
+    .footer__title2,
+    .footer__p {
+        text-align: start;
+
+    }
+
+    .footer__title2 {
+        margin: 0 5.75rem 0 0;
+
+    }
+
+    .footer__p {
+        margin: 0 5.75rem 0 0;
+    }
+
+    .footer__btn--download {
+        margin: 0;
+
+
+    }
+
 }
