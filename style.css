@@ -423,12 +423,12 @@ footer {
 
     .header__imgheroleft {
         grid-area: imgleft;
-        content: url(/starter-code/assets/desktop/image-hero-left.png)
+        content: url(./starter-code/assets/desktop/image-hero-left.png)
     }
 
     .header__imgheroright {
         grid-area: imgright;
-        content: url(/starter-code/assets/desktop/image-hero-right.png);
+        content: url(./starter-code/assets/desktop/image-hero-right.png);
 
     }
 
