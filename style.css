@@ -237,7 +237,7 @@ footer {
 .footer__btn--download {
     padding: 1rem 2.5rem;
     margin-top: 2rem;
-    width: 193px;
+    /* width: 193px; */
 }
 
 .header__btn--download {
@@ -258,7 +258,7 @@ footer {
     background-color: var(--purple);
     margin-top: 1rem;
     margin-bottom: 4rem;
-    width: 139px;
+    /* width: 139px; */
 }
 
 .header__btn--what:hover {
